@@ -4,5 +4,5 @@ import App from '../src/App'
 
 test('renderiza título principal', () => {
   render(<App />)
-  expect(screen.getByText(/Demo React/i)).toBeInTheDocument()
+  expect(screen.getByText(/Frontend y Calidad/i)).toBeInTheDocument()
 })

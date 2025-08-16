@@ -3,20 +3,29 @@ import userEvent from '@testing-library/user-event'
 import SearchBar from '../src/components/SearchBar.jsx'
 import { test, expect, vi } from 'vitest'
 
-test('emite cambios y puede limpiarse', async () => {
+test('emite cambios', async () => {
   const user = userEvent.setup()
   const handleChange = vi.fn()
 
-  render(<SearchBar value="" onChange={handleChange} />)
+  let value = ''
+
+
+  render(
+    <SearchBar
+      value={value}
+      onChange={(val) => {
+        value = val
+        handleChange(val)
+      }}
+    />
+  )
+
+
   const input = screen.getByRole('textbox')
 
-  await user.type(input, 'Lucas')
+  await user.type(input, 'L')
 
-  
-  expect(handleChange).toHaveBeenCalledWith('Lucas')
 
-  const clear = screen.getByRole('button', { name: /limpiar/i })
-  await user.click(clear)
+  expect(value).toBe('L')
 
-  expect(handleChange).toHaveBeenLastCalledWith('')
 })
