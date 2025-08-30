@@ -1,0 +1,3 @@
+[submodule "gestor-reservas"]
+	path = gestor-reservas
+	url = https://github.com/LucasAguilar647/modulo3-Aguilar-Lucas.git
