@@ -8,7 +8,7 @@ export default function ReservaCard({ reserva, onEliminar, onActualizarEstado })
           marginBottom: "0.5rem",
         }}
       >
-        <p><strong>Cliente:</strong> {reserva.nombreCliente}</p>
+        <p><strong>ClienteID:</strong> {reserva.usuarioId}</p>
         <p><strong>Estado:</strong> {reserva.estado}</p>
         <p><strong>Fecha:</strong> {reserva.fecha}</p>
   
