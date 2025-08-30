@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SearchBar from './components/SearchBar.jsx'
 import TodoList from './components/TodoList.jsx'
 import UserCardList from './components/UserCardList.jsx'
+import ReservasPage from './page/ReservaPage.jsx'
 
 export default function App() {
   const [query, setQuery] = useState('')
@@ -30,6 +31,10 @@ export default function App() {
       <section className="card">
         <h2>3- Usuarios</h2>
         <UserCardList />
+      </section>
+
+      <section>
+        <ReservasPage /> 
       </section>
     </div>
   )
